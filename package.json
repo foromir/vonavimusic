@@ -1,0 +1,41 @@
+{
+  "name": "task-manager",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fullpage/react-fullpage": "^0.1.12",
+    "font-awesome": "^4.7.0",
+    "fullpage-react": "^3.1.0",
+    "isomorphic-fetch": "^3.0.0",
+    "react": "16.14.0",
+    "react-div-100vh": "^0.3.2",
+    "react-dom": "16.14.0",
+    "react-facebook-pixel": "^0.1.1",
+    "react-fontawesome": "^1.6.1",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.93.2"
+  },
+  "scripts": {
+    "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts start",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
+    "test": "NODE_OPTIONS=--openssl-legacy-provider react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "resolutions": {
+    "upath": "^1.2.0",
+    "@babel/core": "^7.23.0"
+  }
+}

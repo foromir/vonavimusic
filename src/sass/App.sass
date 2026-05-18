@@ -1,0 +1,117 @@
+// Components
+@import "./layout.sass"
+@import "./components/header.sass"
+@import "./components/modal.sass"
+
+// Pages
+@import "./pages/index.sass"
+
+@import "./media.sass" 
+
+@font-face
+    font-family: Avenir
+    src: url(../fonts/Avenir.ttc) format("truetype")
+    font-weight: normal
+    font-style: normal
+    font-display: swap
+
+html, body
+    position: fixed
+    top: 0
+    left: 0
+    height: 100vh
+    width: 100%
+    overflow: hidden
+body
+    background-color: #000
+    // font-family: 'Didact Gothic', sans-serif
+    // background-position: center
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif
+    // background-size: cover
+    // background-repeat: no-repeat
+    // height: 100vh
+    // max-height: 100vh
+
+.buttonDefault
+    text-transform: uppercase
+    color: #ffffff
+    font-size: 20px
+    border: solid 1px #fff
+    font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif
+    padding: 3px 10px
+    cursor: pointer
+    letter-spacing: 2px
+    text-decoration: none
+    cursor: pointer
+    letter-spacing: 2px
+    text-decoration: none
+    transition: .3s
+    &:hover
+        background-color: rgba(255,255,255,.1)
+        transition: .3s
+a
+    color: #fff
+
+.animation
+    position: relative
+    &:before 
+        content: ""
+        position: absolute
+        height: 1px
+        bottom: 50%
+        left: -10%
+        width: 120%
+        background-color: #fff
+        visibility: hidden
+        -webkit-transform: scaleX(0)
+        transform: scaleX(0)
+        -webkit-transition: all 0.3s ease-in-out 0s
+        transition: all 0.3s ease-in-out 0s
+    &:hover:before
+        visibility: visible
+        -webkit-transform: scaleX(1)
+        transform: scaleX(1)
+.showLoader
+    width: 100%
+    position: fixed
+    background: #fff
+    color: #000
+    z-index: 999999
+    top: 0
+    right: 0
+    height: 100%
+    transition: .5s
+    opacity: 1
+    &>div
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        display: flex
+        flex-direction: column
+        align-items: center
+        color: #000
+    .icon
+        position: relative
+        z-index: 9999
+        top: 15px
+        cursor: pointer
+        width: 65px
+        height: 55px 
+        background-size: contain
+        background-image: url(../images/logo.svg)
+        background-position: center
+        background-repeat: no-repeat
+        filter: brightness(0)
+    .percent
+        color: #000
+        position: relative
+        top: 25px
+        right: -2px
+        font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif
+    &.hide
+        transition: 1s
+        opacity: 0
+        visibility: hidden
+
+

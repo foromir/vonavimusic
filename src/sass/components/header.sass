@@ -1,0 +1,127 @@
+.wrapper-header
+    user-select: none
+    width: 100%
+    height: 45px
+    position: absolute
+    top: 10px
+    left: 0
+    // background: #f0f8ff63
+    display: flex
+    justify-content: space-between
+    padding: 0 40px
+    box-sizing: border-box
+    position: fixed
+    z-index: 2
+    .menu-toggle
+        display: none
+    .logo
+        position: relative
+        z-index: 9999
+        top: 6px
+        cursor: pointer
+        width: 45px
+        height: 35px
+        background-size: contain
+        background-image: url(../../images/logo.svg)
+        background-position: center
+        background-repeat: no-repeat
+    .wrap-menu
+        display: flex
+        justify-content: space-between
+        flex-direction: column
+        z-index: 999
+        
+    .menu
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        text-transform: uppercase
+        color: #fff
+        display: flex
+        font-weight: 400
+        font-size: 14px
+        height: 100%
+        -webkit-transition: all 0.3s ease-out 0s
+        transition: all 0.3s ease-out 0s
+        text-shadow: none
+        font-family: Avenir, "Helvetica Neue", Helvetica, Arial, sans-serif
+        text-transform: uppercase
+        margin: 0 15px
+        letter-spacing: 1px
+        text-decoration: none
+        .menuItem
+            line-height: 45px;
+            margin: 0 30px;
+            letter-spacing: 2px;
+            cursor: pointer;
+            font-size: 20px;
+            color: #fff
+        
+    .social
+        display: flex
+        height: 45px
+        align-items: center
+        a
+            color: #fff
+            font-weight: 100
+            font-size: 14px
+            margin: 0 10px
+            opacity: 1
+            transition: .3s
+            &:hover
+                transition: .3s
+                opacity: .4
+button.menu-toggle
+    cursor: pointer
+    outline: none
+    border-left: none
+    border-right: none
+    background-color: transparent
+    -webkit-appearance: none
+    appearance: none
+          
+$buttonWidth: 30px
+$buttonHeight: 26px
+$buttonColor: darken(#fff, 15%)
+$lineThickness: 3px
+$transitionSpeed: .25s
+$transitionEasing: ease-in-out
+
+// Demo
+.menu-toggle
+    z-index: 9999
+    position: absolute
+    top: 10px
+    right: 40px
+    display: block
+    width: $buttonWidth
+    height: $buttonHeight
+    background: transparent
+    border-top: $lineThickness solid
+    border-bottom: $lineThickness solid
+    color: $buttonColor
+    font-size: 0
+    transition: all $transitionSpeed $transitionEasing
+    &:before,
+    &:after
+        content: ''
+        display: block
+        width: 100%
+        height: $lineThickness
+        position: absolute
+        top: 50%
+        left: 50%
+        background: currentColor
+        transform: translate(-50%, -50%)
+        transition: transform $transitionSpeed $transitionEasing
+
+button.menu-toggle:hover
+    color: lighten($buttonColor, 15%)
+
+button.menu-toggle.is-active
+    border-color: transparent
+    &:before
+        transform: translate(-50%, -50%) rotate(45deg)
+    &:after 
+        transform: translate(-50%, -50%) rotate(-45deg)
+

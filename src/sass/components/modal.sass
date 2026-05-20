@@ -44,8 +44,9 @@
         justify-content: center
         height: 100%
         .wrapOverflowContent
+            // background-color: red !important
             padding: 0 40px
-            max-height: 550px
+            max-height: 590px
             overflow-y: auto
             &::-webkit-scrollbar
                 width: 5px
@@ -53,6 +54,8 @@
                 background: #ddd
             &::-webkit-scrollbar-thumb
                 background: rgba(0, 0, 0, 0.8)
+        a
+            color: #000
         .title
             font-size: 25px
             text-transform: uppercase
@@ -202,12 +205,12 @@
         color: #141414
         text-align: left
         .wrapOverflowContent.vinylModal__scroll
-            max-width: 960px
-            width: 100%
-            margin: 0 auto
-            padding: 56px 28px 40px
-            box-sizing: border-box
-            max-height: 90vh
+            max-width: 960px !important
+            width: 100% !important
+            margin: 0 auto !important
+            padding: 56px 28px 40px !important
+            box-sizing: border-box !important
+            max-height: 90vh !important
         .vinylModal__row
             display: flex
             align-items: flex-start

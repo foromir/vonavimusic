@@ -1,4 +1,5 @@
 import { useState, useEffect, useCallback } from 'react';
+import { preloadModalImages } from '../../utils/preloadModalImages';
 
 function setViewportHeightVar() {
   const vh = window.innerHeight * 0.01;
@@ -51,6 +52,7 @@ export function useHomeLayout() {
 
   const handlePreloaderReveal = useCallback(() => {
     setShowAnimation(true);
+    preloadModalImages();
   }, []);
 
   useEffect(() => {
